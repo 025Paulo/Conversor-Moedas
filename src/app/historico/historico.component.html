@@ -1,0 +1,26 @@
+<div class="historico">
+    <h2 class="titulo">Histórico de Conversões</h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="coluna">Moeda de Origem</th>
+          <th class="coluna">Moeda de Destino</th>
+          <th class="coluna">Valor de Origem</th>
+          <th class="coluna">Valor Convertido</th>
+          <th class="coluna">Taxa de Conversão</th>
+          <th class="coluna">Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let conversao of historicoConversao">
+          <td class="coluna">{{ conversao.moedaOrigem }}</td>
+          <td class="coluna">{{ conversao.moedaDestino }}</td>
+          <td class="coluna">{{ conversao.valorOrigem }}</td>
+          <td class="coluna">{{ conversao.valorConvertido }}</td>
+          <td class="coluna">{{ conversao.taxaConversao }}</td>
+          <td class="coluna">{{ conversao.data | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

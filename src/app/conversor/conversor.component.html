@@ -1,0 +1,31 @@
+<div class="conversor">
+<mat-form-field>
+    <mat-label>Moeda principal</mat-label>
+    <mat-select class="mat-select" [(ngModel)]="moedaOrigem">
+      <mat-option *ngFor="let moeda of moedas" [value]="moeda.symbol">{{ moeda.name }} ({{ moeda.symbol }})</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Moeda convertida </mat-label>
+    <mat-select class="mat-select" [(ngModel)]="moedaDestino">
+      <mat-option *ngFor="let moeda of moedas" [value]="moeda.symbol">{{ moeda.name }} ({{ moeda.symbol }})</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field class="input">
+    <mat-label>Valor a ser convertido:</mat-label>
+    <input matInput [(ngModel)]="valor" type="number">
+  </mat-form-field>
+  
+  
+  <button (click) ="converterMoeda()">Converter</button>
+  
+  <div *ngIf="moedaConvertida && taxaConversao">
+    <p>{{ valor }} em {{ moedaOrigem }} equivale a {{ moedaConvertida }} {{ moedaDestino }}</p>
+    <p>Taxa de conversão: {{ taxaConversao }}</p>
+  </div>
+</div>
+  
+  
+  
