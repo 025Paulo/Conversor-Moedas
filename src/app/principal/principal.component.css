@@ -1,10 +1,18 @@
-.container {
-    width: 80%;
-    padding: 20px;
-    margin-left: 30%;
-}
-.card-img {
-    width: 50%;
-}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .btn {
+    margin-left: 20px;
+  }
 
-
+  .card-img-esq {
+    display: block;
+    margin: 0 auto; 
+    max-height: 100%;
+    max-width: 100%;
+  }

@@ -6,7 +6,6 @@ import { Observable, of } from 'rxjs'; // Importe Observable e of
 export class HistoricoService {
   private historicoKey = 'Historico';
 
-  // Obtém o histórico de conversões
   obterHistoricoDeConversoes(): Observable<HistoricoConversao[]> {
     const historico = this.getHistorico();
     return of(historico); 

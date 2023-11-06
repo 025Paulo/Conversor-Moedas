@@ -36,7 +36,7 @@ export class ConversorComponent implements OnInit {
         }
       },
       (error: any) => {
-        console.error('Erro ao obter a lista de moedas:', error);
+        console.error('Erro ao obter a moedas:', error);
       }
     );
   }
